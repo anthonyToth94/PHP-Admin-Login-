@@ -1,0 +1,205 @@
+*{
+    box-sizing: border-box;
+  	margin: 0px;
+  	padding: 0px;
+}
+
+html{
+    background-image: linear-gradient(#668cff, #00134d); 
+    /* height:100%; */
+}
+
+body{
+    font-size: 16px;
+  	font-family: 'Roboto', sans-serif
+    line-height: 16px;
+    color:white;
+} 
+
+#container {
+  
+  width: 90%;
+  margin: auto;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+#wrapper{
+
+	width:500px;
+	padding: 0px 50px;
+    min-height: 90vh;
+    animation:lecsuszik 1s forwards; 
+}
+
+@keyframes lecsuszik{
+	100%{min-height:50vh;}
+}  
+
+#userIcon{
+	font-size:70px;
+	color:white;
+	display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+h1{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Poppins', sans-serif;
+	margin-bottom:35px;
+}
+
+
+.egySor{
+	margin-bottom:35px;
+}
+
+form{
+	width: 100%; 
+}
+
+
+input[name="felhasznalo"], input[name="jelszo"], input[name="jelszo2"]{
+	font-size:18px;
+	outline:none;
+	color:white;
+    line-height: 1.2px;
+    padding:10px;
+	width: 100%;
+    background: transparent;
+
+
+    border:none;
+	border-radius:0;
+    border-bottom: 2px solid white;
+
+    transition:0.5s; 
+}
+
+input[name="felhasznalo"]:focus, input[name="jelszo"]:focus, input[name="jelszo2"]:focus{
+    border-color:#00134d;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+
+input[name="kuldes"], input[name="kijelentkezes"], #belepes, #regisztracio{
+	font-size:18px;
+	line-height: 1.2px;
+	padding: 0 15px;
+    
+    font-style: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 120px;
+    height: 50px;
+    border-radius: 2px;
+    cursor:pointer;
+    border:none;
+    outline:none;
+
+    transition:0.5s; 
+}
+
+input[name="kuldes"]:hover, input[name="kijelentkezes"]:hover, #belepes:hover, #regisztracio:hover{
+    background: #00134d;
+    border:0.5px solid white;
+    color:white;
+}
+
+/* Admin felület */
+
+h3{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Poppins', sans-serif;
+	color:brown;
+	text-shadow: 1px 1px 1px black;
+}
+
+th,td{
+	padding:5px;
+	border-bottom:1px solid white;
+}
+
+.torles{
+	text-decoration: none;
+	color:black;
+	background:brown;
+	padding:3px;
+	text-shadow: none;
+}
+.frissites{
+	text-decoration: none;
+	color:black;
+	background:orange;
+	padding:3px;
+	text-shadow: none;
+	cursor:pointer;
+	border:none;
+	outline:none;
+}	
+
+.torles:hover{
+	color:white;
+}
+
+.frissites:hover{
+	color:white;
+}
+
+#frissitesForm{
+	padding-top:35px;
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	opacity: 0;
+}
+#frissitesForm.mutat {
+  opacity: 100;
+}
+
+#kijelentkezes{
+	display:flex;
+	justify-content: center;
+	margin-bottom: 35px;
+}
+
+/* Frissites */
+.frissitesMezo{
+	padding:5px;
+	font-size:16px;
+	outline:none;
+}
+
+input[name="elfogad"]{
+	min-width: 120px;
+    height: 50px;
+	padding:5px;
+	cursor:pointer;
+	outline:none;
+	border:none;
+	border-radius: 5px;
+	font-size: 18px;
+    line-height: 1.2px;
+
+	color:orange;
+	background:black;
+}
+
+input[name="elfogad"]:hover{
+	color:black;
+	background:orange;
+}
